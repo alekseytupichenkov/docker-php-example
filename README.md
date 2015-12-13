@@ -24,9 +24,9 @@ Or run manually:
 For Mac OS:
 
 docker-machine create --driver VirtualBox default
-        eval "$(docker-machine env default)"
-        docker-compose build
-        docker-compose up -d
+          eval "$(docker-machine env default)"
+          docker-compose build
+          docker-compose up -d
 
 For Linux:
         docker-compose build
