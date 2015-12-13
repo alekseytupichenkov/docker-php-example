@@ -1,7 +1,7 @@
 It's my docker preset
 
 Use nginx, php-fpm, mongo, rockmongo, memcached, redis
-
+=============================
 
 If you don't install docker:
 
@@ -23,19 +23,14 @@ Or run manually:
 
 For Mac OS:
 
-{code}
 docker-machine create --driver VirtualBox default
-eval "$(docker-machine env default)"
-docker-compose build
-docker-compose up -d
-{code}
+        eval "$(docker-machine env default)"
+        docker-compose build
+        docker-compose up -d
 
 For Linux:
-
-{code}
-docker-compose build
-docker-compose up -d
-{code}
+        docker-compose build
+        docker-compose up -d
 
 For Windows:
 
