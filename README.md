@@ -1,6 +1,4 @@
-It's my docker preset
-
-Use nginx, php-fpm, mongo, rockmongo, memcached, redis
+It's my docker preset, use nginx, php-fpm, mongo, rockmongo, memcached, redis
 =============================
 
 If you don't install docker:
