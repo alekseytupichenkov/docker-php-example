@@ -10,27 +10,35 @@ For Linux - http://docs.docker.com/linux/step_one/
 For Mac OS, Windows - https://www.docker.com/docker-toolbox
 
 
-You can run script for automatically run docker:
+### Run automatically
+Linux
+```sh
+docker/linux.sh
+```
 
-For Linux docker/linux.sh
-
-For Mac OS docker/macos.sh
+Mac OS 
+```sh
+docker/macos.sh
+```
 
 For Windows maybe write later
 
 
-Or run manually:
+### Run manually
 
 For Mac OS:
-
+```sh
 docker-machine create --driver VirtualBox default
-          eval "$(docker-machine env default)"
-          docker-compose build
-          docker-compose up -d
+eval "$(docker-machine env default)"
+docker-compose build
+docker-compose up -d
+```
 
 For Linux:
-        docker-compose build
-        docker-compose up -d
+```sh
+docker-compose build
+docker-compose up -d
+```
 
 For Windows:
 
