@@ -1,0 +1,36 @@
+mongo:
+  image: mongo:3.2
+  ports:
+    - 27017:27017
+  volumes:
+    - /data/db
+rockmongo:
+  image: webts/rockmongo
+  ports:
+    - 8081:80
+  links:
+    - mongo:db
+memcached:
+  image: memcached:latest
+redis:
+  image: redis:latest
+php:
+  build: docker/php-fpm
+  environment:
+    - APP_ENV=docker
+  expose:
+    - 9000:9000
+  volumes:
+    - .:/data/www
+  links:
+    - mongo
+    - memcached
+    - redis
+nginx:
+  build: docker/nginx
+  ports:
+    - 8080:80
+  volumes_from:
+    - php
+  links:
+    - php
